@@ -1,0 +1,41 @@
+body {
+    background-color: #333;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: black;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+h2 {
+    color: gold;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid gold;
+    background: #444;
+    color: white;
+}
+
+button {
+    background: gold;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkgoldenrod;
+}
