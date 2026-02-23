@@ -1,0 +1,108 @@
+/* ===============================
+   Al Nahl Organic – About Page CSS
+   Brand Colors:
+   Golden: #f1c40f
+   Black:  #000000
+   White:  #ffffff
+   =============================== */
+
+:root {
+  --golden: #f1c40f;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+/* -------- Global -------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  color: var(--black);
+  background: var(--white); /* keep normal background same as homepage */
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* -------- Header Styling (Optimized) -------- */
+/* Header background forced to Black + Golden accent */
+header,
+.site-header {
+  background: var(--black);
+  color: var(--white);
+}
+
+header a,
+.site-header a {
+  color: var(--golden);
+  text-decoration: none;
+}
+
+header a:hover,
+.site-header a:hover {
+  color: var(--white);
+}
+
+/* -------- Section Layout -------- */
+.section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+  padding: 50px 40px;
+}
+
+.section.reverse {
+  flex-direction: row-reverse;
+}
+
+.section.center {
+  flex-direction: column;
+  text-align: center;
+}
+
+/* -------- Background Variants -------- */
+.section.white {
+  background: var(--white);
+  color: var(--black);
+}
+
+.section.black {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* -------- Images -------- */
+.section img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 14px;
+  border: 4px solid var(--golden);
+}
+
+/* -------- Content -------- */
+.content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--golden); /* Golden headings everywhere */
+}
+
+.content p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+/* -------- Mobile Optimization -------- */
+@media (max-width: 768px) {
+  .section,
+  .section.reverse {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+}

@@ -1,0 +1,267 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: black;
+    padding: 15px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Change background when scrolling */
+.navbar.scrolled {
+    background: black; /* Fully black when scrolling */
+}
+
+/* Brand Logo */
+.navbar-brand {
+    font-size: 26px;
+    font-weight: bold;
+    color: #f1c40f !important; /* Golden color */
+    text-transform: uppercase;
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+    font-size: 18px; /* Increased font size */
+    font-weight: 600; /* Increased font weight for bolder text */
+    color: white !important;
+    padding: 12px 20px; /* Increased padding for more spacing */
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.navbar-nav .nav-link:hover {
+    color: #f1c40f !important; /* Golden hover effect */
+}
+
+/* Active Link */
+.navbar-nav .nav-link.active {
+    font-weight: 700; /* Bold text */
+    color: #f1c40f !important; /* Golden color for active link */
+}
+
+/* Underline Effect */
+.navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #f1c40f;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%; /* Increased underline width for more impact */
+}
+
+/* Navbar Toggler Icon */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* Make Navbar Sticky */
+.navbar.fixed-top {
+    z-index: 1030;
+}
+
+/* Navbar Logo - Bigger Size */
+.navbar-brand .logo {
+    height: 100px; /* Increased size */
+    width: auto;   /* Keeps aspect ratio */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.navbar-brand .logo:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Navbar Height Adjustment */
+.navbar {
+    padding: 0.5rem 1rem; /* Adjusts padding for larger logo */
+}
+
+/* Adjust Logo Size on Smaller Screens */
+@media (max-width: 992px) {
+    .navbar-brand .logo {
+        height: 80px; /* Slightly smaller for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand .logo {
+        height: 70px; /* Smaller for mobile */
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('../images/blog-hero.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    margin-top: 126px; 
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Google Translate Widget */
+#google_translate_element {
+    position: fixed;
+    top: 10%;
+    right: 20px;
+    z-index: 9999;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+/* Language Selector */
+.language-switch {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.language-switch button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.language-switch .btn-english {
+    background: #f1c40f;
+    color: black;
+}
+
+.language-switch .btn-urdu {
+    background: black;
+    color: white;
+}
+
+.language-switch button:hover {
+    opacity: 0.8;
+}
+
+/* Blog Section */
+#blog-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Blog Posts */
+.blog-post {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.blog-post:hover {
+    transform: scale(1.02);
+}
+
+.blog-post h2 {
+    color: #f1c40f;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Urdu Blog Styling */
+.urdu-content {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Noto Nastaliq Urdu', serif;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #212121;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #f1c40f;
+}
+
+/* Social Icons Hover Effect */
+.social-icon {
+    transition: color 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 30px; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover i {
+    transform: scale(1.2); 
+}
+
+/* Hover effects for each social icon */
+.social-icon:hover .fa-facebook {
+    color: #1877F2;
+}
+
+.social-icon:hover .bi-whatsapp {
+    color: #25D366; 
+}
+
+.social-icon:hover .bi-linkedin {
+    color: #0077b5; 
+}
+
+.social-icon:hover .bi-instagram {
+    color: #E1306C; 
+}
+
+.social-icon:hover .bi-youtube {
+    color: #FF0000; 
+}
+
+.social-icon:hover .fa-tiktok {
+    color: #ff0050; 
+}
+

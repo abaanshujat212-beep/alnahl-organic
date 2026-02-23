@@ -1,0 +1,203 @@
+/* General Styling */
+body {
+    background-color: #121212; /* Dark background */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Sticky Navbar on Scroll */
+.navbar.scrolled {
+    background: black;
+}
+
+/* Brand Logo */
+.navbar-brand .logo {
+    height: 80px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand .logo:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 600;
+    color: white !important;
+    padding: 12px 20px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #f1c40f !important;
+}
+
+/* Underline Effect */
+.navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background: #f1c40f;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Product Section */
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
+}
+
+/* Product Details */
+h2 {
+    color: #f1c40f;
+    font-weight: 700;
+}
+
+p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* Variant Selector */
+#variant-select {
+    background: black;
+    color: white;
+    border: 2px solid #f1c40f;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#variant-select option {
+    background: black;
+    color: white;
+}
+
+/* Buttons */
+.btn-warning, .btn-success {
+    font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-warning:hover {
+    background-color: #f1c40f;
+    color: black;
+}
+
+.btn-success:hover {
+    background-color: #28a745;
+}
+
+/* Reviews Section */
+.reviews {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.review p {
+    font-size: 16px;
+}
+
+.review strong {
+    color: #f1c40f;
+}
+
+/* Review Form */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+form label {
+    font-weight: 600;
+}
+
+textarea {
+    background: black;
+    color: white;
+    border: 1px solid #f1c40f;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-brand .logo {
+        height: 70px;
+    }
+
+    .product-image {
+        height: auto;
+    }
+}
+
+.star-rating {
+    font-size: 24px; /* Adjust size of stars */
+}
+
+.filled-star {
+    color: gold; /* Color for selected stars */
+}
+
+.empty-star {
+    color: #ccc; /* Gray color for unselected stars */
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    font-size: 50px !important; /* Ensure the size is applied */
+}
+
+.rating input {
+    display: none !important; /* Hide radio buttons */
+}
+
+.rating label {
+    cursor: pointer;
+    color: transparent !important; /* Initially transparent */
+    text-shadow: 0 0 1px #000 !important; /* Makes them slightly visible */
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+    color: gold !important; /* Change color on hover */
+    text-shadow: none !important;
+}
+
+.rating input:checked ~ label {
+    color: gold !important; /* Keep stars filled after selection */
+    text-shadow: none !important;
+}
+

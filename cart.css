@@ -1,0 +1,246 @@
+/* General Styling */
+body {
+    background-color: #121212; /* Dark background for contrast */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 80px; /* Adjust for fixed navbar */
+}
+/* Navbar Styling */
+.navbar {
+    background: black !important;
+    padding: 15px 0 !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* Change background when scrolling */
+.navbar.scrolled {
+    background: black !important; /* Fully black when scrolling */
+}
+
+/* Brand Logo */
+.navbar-brand {
+    font-size: 26px !important;
+    font-weight: bold !important;
+    color: #f1c40f !important; /* Golden color */
+    text-transform: uppercase !important;
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+    font-size: 18px !important; /* Increased font size */
+    font-weight: 600 !important; /* Increased font weight for bolder text */
+    color: white !important;
+    padding: 12px 20px !important; /* Increased padding for more spacing */
+    position: relative !important;
+    transition: color 0.3s ease-in-out !important;
+}
+
+/* Hover Effect */
+.navbar-nav .nav-link:hover {
+    color: #f1c40f !important; /* Golden hover effect */
+}
+
+/* Active Link */
+.navbar-nav .nav-link.active {
+    font-weight: 700 !important; /* Bold text */
+    color: #f1c40f !important; /* Golden color for active link */
+}
+
+/* Underline Effect */
+.navbar-nav .nav-link::after {
+    content: "" !important;
+    display: block !important;
+    height: 2px !important;
+    width: 0 !important;
+    background: #f1c40f !important;
+    transition: width 0.3s ease-in-out !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100% !important; /* Increased underline width for more impact */
+}
+
+/* Navbar Toggler Icon */
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler-icon {
+    background-color: white !important;
+    border-radius: 3px !important;
+}
+
+/* Make Navbar Sticky */
+.navbar.fixed-top {
+    z-index: 1030 !important;
+}
+
+/* Navbar Logo - Bigger Size */
+.navbar-brand .logo {
+    height: 100px !important; /* Increased size */
+    width: auto !important;   /* Keeps aspect ratio */
+    transition: transform 0.3s ease-in-out !important;
+}
+
+/* Hover Effect */
+.navbar-brand .logo:hover {
+    transform: scale(1.1) !important; /* Slight zoom on hover */
+}
+
+/* Navbar Height Adjustment */
+.navbar {
+    padding: 0.5rem 1rem !important; /* Adjusts padding for larger logo */
+}
+
+/* Adjust Logo Size on Smaller Screens */
+@media (max-width: 992px) {
+    .navbar-brand .logo {
+        height: 80px !important; /* Slightly smaller for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand .logo {
+        height: 70px !important; /* Smaller for mobile */
+    }
+}
+
+/* Active Link */
+.navbar-nav .nav-link.active {
+    font-weight: 700 !important; /* Bold text */
+    color: #f1c40f !important; /* Golden color for active link */
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+    color: #f1c40f !important; /* Golden hover effect */
+}
+
+/* Underline Effect */
+.navbar-nav .nav-link::after {
+    content: "" !important;
+    display: block !important;
+    height: 2px !important;
+    width: 0 !important;
+    background: #f1c40f !important;
+    transition: width 0.3s ease-in-out !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100% !important; /* Increased underline width for more impact */
+}
+
+h2 {
+    text-align: center;
+    color: #f1c40f;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.table {
+    background: #222;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table th {
+    background: #f1c40f;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+input[type="number"] {
+    width: 60px;
+    text-align: center;
+    border: none;
+    background: #333;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.btn-primary, .btn-success, .btn-secondary, .btn-danger {
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background: #f1c40f;
+    border: none;
+    color: black;
+}
+
+.btn-primary:hover {
+    background: #d4ac0d;
+}
+
+.btn-success {
+    background: green;
+    border: none;
+}
+
+.btn-success:hover {
+    background: darkgreen;
+}
+
+.btn-danger:hover {
+    background: darkred;
+}
+
+.btn-secondary:hover {
+    background: gray;
+}
+/* Empty Cart Styling */
+.empty-cart {
+    text-align: center !important;
+    margin-top: 100px !important;
+}
+
+.empty-cart h2 {
+    font-size: 28px !important;
+    font-weight: bold !important;
+    color: #f1c40f !important; /* Golden color */
+    margin-bottom: 20px !important;
+}
+
+.empty-cart a {
+    display: inline-block !important;
+    font-size: 18px !important;
+    color: white !important;
+    background: #f1c40f !important;
+    padding: 12px 25px !important;
+    border-radius: 5px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.empty-cart a:hover {
+    background: black !important;
+    color: #f1c40f !important;
+    text-decoration: none !important;
+}
